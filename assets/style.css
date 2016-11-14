@@ -1,0 +1,857 @@
+/* 
+ *-------------------------------------------
+ * Author: Hairul Ardi
+ * Author URI: http://hairulardi.github.io
+ *-------------------------------------------
+ */
+
+/*General*/
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #474d5d;
+}
+
+h1
+{
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+h2
+{
+    position: relative;
+    font-weight: 300 !important;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3
+{
+    text-align: center;
+    margin: 30px 0;
+}
+
+h4
+{
+    font-weight: 700;
+    font-size: 19px;
+}
+
+hr
+{
+    width: 90%;
+    border: 0;
+    height: 2px;
+}
+hr:not(.hr-header)
+{
+    margin-bottom: 100px;
+}
+
+.container
+{
+    padding: 80px 30px;
+    position: relative;
+}
+
+/*.container
+{
+    border: 1px solid blue;
+}
+.row
+{
+    border: 1px solid green;
+}
+[class*="col-"]
+{
+    border: 1px solid red;
+}
+*/
+
+/*Header*/
+.header
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../images/wallpaper4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "patua one", sans-serif;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: #fff;
+}
+.header hr, #portfolio hr, #contact hr
+{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+.header p
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+.header p>i
+{
+    font-size: 7px;
+}
+
+.img-profile
+{
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+}
+
+/*Navigasi*/
+.navbar-default
+{
+    font-size: 15px;
+    background-color: rgba(71, 77, 93, .9);
+    border: none;
+    font-weight: 600;
+    -moz-transition: all .35s linear;
+    -webkit-transition: all .35s linear;
+    transition: all .35s linear;
+}
+.navbar-nav
+{
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.navbar-nav li
+{
+    float: none;
+}
+.navbar-nav a
+{
+    color: #fff !important;
+}
+.navbar-nav .active a
+{
+    background-color: inherit !important;
+    color: #FF675F !important;
+}
+
+.navbar-toggle
+{
+    float: none;
+    margin: 8px 0;
+    border: 1px solid #009999 !important;
+    background-color: #00BDBD;
+}
+.navbar-toggle:focus, .navbar-toggle:hover
+{
+    background-color: #009999 !important;
+    border: 1px solid #006666 !important;
+}
+
+.navbar-toggle .icon-bar
+{
+    background-color: #fff !important; 
+}
+
+.navbar-collapse
+{
+    border-top: 1px solid #434856 !important;
+}
+
+/*Section Portfolio*/
+#portfolio
+{
+    background-color: #00BDBD;
+}
+#portfolio h2
+{
+    color: #fff;
+}
+.thumbnail
+{
+    cursor: pointer;
+    overflow: hidden;
+}
+.thumbnail img
+{
+    width: 100%;
+    height: 100%;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.thumbnail.thumb-isi:hover img
+{
+    -ms-transform: rotate(-15deg) scale(1.5);
+    -moz-transform: rotate(-15deg) scale(1.5);
+    -webkit-transform: rotate(-15deg) scale(1.5);
+    transform: rotate(-15deg) scale(1.5);
+}
+
+.overlay-porto
+{
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    left: 15px;
+    border-radius: 4px;
+    z-index: 1;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.overlay-porto:hover
+{
+    opacity: 1;
+}
+.overlay-porto p
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.overlay-porto p:after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 8px;
+    -moz-transition: left 1s ease 0.3s, right 1s ease 0.3s, opacity 0.2s 0.3s;
+    -webkit-transition: left 1s ease 0.3s, right 1s ease 0.3s, opacity 0.2s 0.3s;
+    transition: left 1s ease 0.3s, right 1s ease 0.3s, opacity 0.2s 0.3s;
+    opacity: 0;
+}
+.overlay-porto:hover p:after
+{
+    left: -25px;
+    right: -25px;
+    opacity: 1;
+}
+
+.modal h2
+{
+    margin-top: 50px;
+    font-size: 26px;
+    color: #2BB3DD;
+}
+.modal-content
+{
+    border-radius: 0;
+}
+.modal-body
+{
+    background-color: #f2f2f2;
+}
+.modal-isi, .laptop
+{
+    position: relative;
+}
+.modal-desc
+{
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.modal-desc p
+{
+    text-align: justify;
+}
+
+.hr-modal
+{
+    margin-bottom: 80px !important;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(43, 179, 221, 0.75), rgba(255, 255, 255, 0));
+}
+
+.build
+{
+    background-color: #d9d9d9;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.modal-desc-info
+{
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+.modal-desc-info .span-desc-info
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: block;
+}
+.span-desc-info span
+{
+    font-weight: 600;
+    color: #00BDBD;
+}
+
+/*.modal.fade 
+{
+    transform: scale(0.1);
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.modal.fade.in 
+{
+    transform: scale(1);
+}*/
+
+.btnclose
+{
+    font-size: 17px;
+    margin-bottom: 70px;
+    color: #fff;
+    border: 1px solid #009999;
+    background-color: #00BDBD;
+}
+.btnclose:focus, .btnclose:hover, .btnclose:active
+{
+    color: #fff !important;
+    background-color: #009999 !important;
+    border: 1px solid #006666 !important;
+}
+
+.laptop
+{
+    width: 100%;
+    padding-bottom: 53.5%;
+}
+.laptop-back
+{
+    background: url("../images/laptop.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-wrap
+{
+    position: absolute;
+    top: 8.5%;
+    left: 13.6%;
+    right: 13.6%;
+    bottom: 0;
+}
+.carousel
+{
+    margin: auto;
+}
+.carousel img
+{
+    width: 100%;
+    height: auto;
+}
+
+.extends
+{
+    display: none;
+}
+
+.extend-div
+{
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+#extend-trigger, #extend-trigger:visited, #extend-trigger:hover
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*Section About me*/
+#about
+{
+    background-color: #EEEEEE;
+}
+#about h2
+{
+    color: #FF675F;
+}
+#about hr
+{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 103, 95, 0.8), rgba(255, 255, 255, 0));
+}
+#about p
+{
+    text-align: justify;
+}
+#about img
+{
+    width: 70%;
+    border: 3px solid #474d5d;
+    border-radius: 50%;
+}
+
+.box-about
+{
+    margin-bottom: 50px;
+}
+.foto-isi
+{
+    padding: 0 10px 10px;
+}
+.about-isi
+{
+    padding-top: 20px; 
+}
+.about-isi p
+{
+    font-size: 17px;
+    padding: 25px;
+    background-color: #fafafa;
+    border-bottom: 4px solid #e8e7e7;
+}
+.about-isi p:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: calc(50% - 10px);
+    border-bottom: 16px solid #fafafa;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+}
+.about-isi i
+{
+    color: rgba(71, 77, 93, .2);
+}
+
+.chart
+{
+  position: relative;
+  display: inline-block;
+  width: 152px;
+  height: 152px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.chart canvas
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.percent
+{
+  display: inline-block;
+  line-height: 152px;
+  z-index: 2;
+}
+
+/*Section Contact*/
+#contact
+{
+    background-color: #2BB3DD;
+    color: #ffffff;
+}
+#contact h4
+{
+    margin-bottom: 20px;
+}
+#contact p>i
+{
+    margin-right: 7px;
+}
+
+/*Icon Sosmed*/
+.box-sosmed
+{
+    font-size: 25px;
+    color: #2BB3DD;
+    padding: 15px;
+}
+
+.sosmed
+{
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 46px;
+    text-decoration: none;
+    margin: 30px 3px 0;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.sosmed:link, .sosmed:visited, .sosmed:hover, .sosmed:active
+{
+    color: inherit;
+}
+.sosmed:hover
+{
+    box-shadow: 0px 1px 5px #4d4d4d;
+}
+
+.sosmed.facebook:hover
+{
+    color: #4867AA;
+}
+.sosmed.github:hover
+{
+    color: #323131;
+}
+.sosmed.linkedin:hover
+{
+    color: #1686B0;
+}
+
+.link-top
+{
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 30px;
+}
+.link-top:link, .link-top:visited, .link-top:hover, .sosmed:active
+{
+    color: inherit;
+}
+
+/*Footer*/
+footer
+{
+    color: #fff;
+    background-color: #474D5D;
+    padding: 20px;
+    font-size: 15px;
+}
+
+/*Animasi*/
+.slideanim
+{
+    visibility: hidden;
+}
+.slide-aktif, .slide-kiri-aktif, .slide-kanan-aktif
+{
+    visibility: visible;
+}
+.slide-aktif
+{
+    -webkit-animation: slide 1s;
+    animation: slide 1s;
+}
+.slide-kiri-aktif
+{
+    -webkit-animation: slide-kiri 1s;
+    animation: slide-kiri 1s;
+}
+.slide-kanan-aktif
+{
+    -webkit-animation: slide-kanan 1s;
+    animation: slide-kanan 1s;
+}
+
+/*efek slide keatas*/
+@-webkit-keyframes slide
+{
+    from
+    {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    to
+    {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@keyframes slide
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/*efek slide dari kiri, tapi berubah keatas kalau layar dibawah 768*/
+@-webkit-keyframes slide-kiri
+{
+    from
+    {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    to
+    {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@keyframes slide-kiri
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/*efek slide dari kanan, tapi berubah keatas kalau layar dibawah 768*/
+@-webkit-keyframes slide-kanan
+{
+    from
+    {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    to
+    {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@keyframes slide-kanan
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/*Screen dengan layar minimal 768*/
+@media only screen and (min-width: 768px)
+{
+    .container
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    h1
+    {
+        font-size: 50px;
+    }
+
+    .header
+    {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    hr:not(.hr-modal)
+    {
+        width: 50%;
+    }
+
+    .navbar-default
+    {
+        background-color: rgba(71, 77, 93, .7);
+    }
+    .navbar-default.scrollnav
+    {
+        background-color: rgba(71, 77, 93, 0);
+        padding: 15px 0;
+        font-size: 17px;
+    }
+    .navbar-collapse
+    {
+        border-top: none !important;
+    }
+    .navbar-nav li
+    {
+        display: inline-block;
+    }
+
+    .modal h2
+    {
+        font-size: 36px;
+    }
+    .modal-dialog
+    {
+        width: auto !important;
+        margin: 20px;
+    }
+
+    .overlay-porto
+    {
+        font-size: 25px;
+        bottom: 20px;
+    }
+
+    .modal-desc-info .span-desc-info
+    {
+        display: inline-block;
+    }
+
+    .modal-desc
+    {
+        padding: 10px 80px;
+    }
+    .modal-desc p
+    {
+        text-align: center;
+    }
+
+    #about img
+    {
+        width: 90%;
+    }
+    .foto-isi
+    {
+        padding-bottom: 0;
+        padding-right: 25px;
+    }
+    .about-isi
+    {
+        padding-top: 0;
+    }
+    .about-isi:before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 10px;
+        left: -10px;
+        border-left: 1px solid rgba(51, 51, 51, .1); 
+    }
+    .about-isi p
+    {
+        line-height: 2;
+        padding: 25px 50px;
+    }
+    .about-isi p:before
+    {
+        top: 20px;
+        left: -14px;
+        border-right: 16px solid #fafafa;
+        border-top: 13px solid transparent;
+        border-bottom: 13px solid transparent;
+    }
+
+    /*efek slide dari kiri*/
+    @-webkit-keyframes slide-kiri
+    {
+        from
+        {
+            opacity: 0;
+            transform: translateX(-70%);
+        }
+        to
+        {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+    @keyframes slide-kiri
+    {
+        from
+        {
+            opacity: 0;
+            transform: translateX(-70%);
+        }
+        to
+        {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    /*efek slide dari kanan*/
+    @-webkit-keyframes slide-kanan
+    {
+        from
+        {
+            opacity: 0;
+            transform: translateX(70%);
+        }
+        to
+        {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+    @keyframes slide-kanan
+    {
+        from
+        {
+            opacity: 0;
+            transform: translateX(70%);
+        }
+        to
+        {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+}
+
+/*Screen dengan layar minimal 994*/
+@media only screen and (min-width: 994px)
+{
+    .thumbnail img
+    {
+        height: 250px;
+    }
+
+    .modal-desc-info .span-desc-info
+    {
+        display: inline-block;
+    }  
+    #about .row
+    {
+        padding: 0 20px;
+    }
+}
+
+/*Screen dengan layar minimal 1050*/
+@media only screen and (min-width: 1050px)
+{
+    .modal-dialog
+    {
+        width: 1000px !important;
+        margin: 30px auto;
+    }
+
+    #about img
+    {
+        width: 80%;
+    }
+    .about-isi:before
+    {
+        left: -20px;
+    }
+}
