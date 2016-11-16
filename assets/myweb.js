@@ -120,7 +120,7 @@ $(document).ready(function()
     });
 
     //hidden thumbnail portofolio muldai dari index ke (n)
-    $(function()
+    (function()
     {
         var lebar = $(window).innerWidth();
 
@@ -132,7 +132,7 @@ $(document).ready(function()
         {
              $(".divporto").slice(4).css("display", "none");
         }
-    });
+    })();
 
     //tampilkan hidden portofolio ketika di klik
     $("#extend-trigger").click(function(event)
