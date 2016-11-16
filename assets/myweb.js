@@ -109,6 +109,16 @@ $(document).ready(function()
         }
     });
 
+    //tutup navbar saat sudah diklik di mobile
+    $(".collapse a").click(function()
+    {
+        if($(window).innerWidth() < 768 )
+        {
+            //.in class bawaan bootstrap di navbar
+            $("#navigasi").removeClass("in");
+        }
+    });
+
     //hidden thumbnail portofolio muldai dari index ke (n)
     $(function()
     {
